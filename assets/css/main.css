@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 50px;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    background-color: cornflowerblue;
+}
+
+header #nav-list ul {
+    display: flex;
+    gap: 50px;
+}
+
+header nav ul li {
+    list-style-type: none;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo-vertical {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.logo img {
+    width: 300px;
+}
+
+.logo-vertical img {
+    width: 130px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+}
+
+#description {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(135, 170, 235);
+    padding: 50px;
+}
+
+#description p {
+    color: white;
+    font-size: x-large;
+    font-weight: 700;
+}
+
+#check-resi {
+    max-height: fit-content;
+    min-height: 30vh;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px gainsboro;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 20px;
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+#check-resi div {
+    width: 80%;
+}
+
+#check-resi div p {
+    text-align: center;
+    font-size: larger;
+    font-weight: 700;
+    color: cornflowerblue;
+}
+
+#form-check-resi {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#form-check-resi input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: medium;
+    font-weight: 500;
+}
+
+#form-check-resi button {
+    cursor: pointer;
+    background-color: rgb(121, 157, 223);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: medium;
+    font-weight: 600;
+}
+
+#form-check-resi button:hover {
+    background-color: cornflowerblue;
+    box-shadow: 1px 1px 5px cadetblue;
+}
+
+aside {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(135, 170, 235);
+}
+
+aside > div > p {
+    font-size: x-large;
+    font-weight: 700;
+    color: white;
+}
+
+#profile {
+    display: flex;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px cornflowerblue;
+    background-color: white;
+}
+
+.profile-card:hover {
+    box-shadow: 1px 1px 10px cadetblue;
+    background-color: cornflowerblue;
+}
+
+.profile-card p {
+    font-weight: 600;
+    color: cornflowerblue;
+}
+
+.profile-card:hover p {
+    color: white;
+}
+
+.profile-card > .role {
+    font-size: larger;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    width: 100px;
+}
+
+footer {
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+footer p {
+    color: white;
+}
+
+#hamburger-menu {
+    cursor: pointer;
+    display: none;
+    padding-inline: 4px;
+    border-radius: 4px;
+}
+
+#hamburger-menu:hover {
+    background-color: white;
+}
+
+#hamburger-menu:hover div {
+    background-color: cornflowerblue;
+}
+  
+#hamburger-menu div {
+    width: 32px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+#nav-list-mobile {
+    position: fixed;
+    top: 60px;
+    left: 0px;
+    display: none;
+    flex-direction: column;
+    background-color: cornflowerblue;
+    width: 100%;
+}
+
+#nav-list-mobile li {
+    text-align: center;
+    padding: 10px;
+}
+
+#nav-list-mobile li:hover {
+    background-color: white;
+}
+
+#nav-list-mobile li:hover a {
+    color: cornflowerblue;
+}
+
+@media only screen and (max-width: 480px) {
+    #description {
+        flex-direction: column;
+    }
+
+    #description p {
+        text-align: center;
+    }
+
+    #profile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer p {
+        font-size: small;
+    }
+
+    #check-resi div {
+        width: 90%;
+    }
+    
+    #form-check-resi {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding-inline: 30px;
+    }
+    
+    header #nav-list {
+        display: none;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    #check-resi div p {
+        font-size: large;
+    }
+
+    #check-resi div {
+        width: 80%;
+    }
+    
+    #form-check-resi {
+        width: 90%;
+    }
+
+    #hamburger-menu {
+        display: block;
+    }
+}
